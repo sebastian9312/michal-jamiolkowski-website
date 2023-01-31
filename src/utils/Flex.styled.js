@@ -8,7 +8,7 @@ export const Flex = styled.div`
         flex:1;
     }
 
-    @media (${({ theme }) => theme.screen.mobile}) {
+    @media (${({ theme }) => theme.media.mobile}) {
         flex-direction: column;
         text-align: center;
     }

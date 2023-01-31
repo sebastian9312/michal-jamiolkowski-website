@@ -10,6 +10,7 @@ const StyledNavbar = styled.nav`
     height: 100px;
     padding: 0 120px;
     background-color: ${({ theme }) => theme.colors.secondaryColor};
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
     position: fixed;
     width: 100%;
 
