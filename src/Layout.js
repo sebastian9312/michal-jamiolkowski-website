@@ -6,6 +6,7 @@ import { theme } from './utils/theme';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
+
 const GlobalStyle = createGlobalStyle`
     @import url('https://fonts.googleapis.com/css2?family=Charmonman:wght@400;700&family=Open+Sans:wght@400;700&display=swap');
 
@@ -15,10 +16,10 @@ const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
     }
 
-    body {
+    html, body {
         font-family: 'Charmonman', sans-serif;
-
-        height: 300vh;
+        color: ${({ theme }) => theme.colors.fontColor};
+        scroll-behavior: smooth;
     }
 `;
 

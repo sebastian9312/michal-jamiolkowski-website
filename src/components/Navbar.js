@@ -13,6 +13,7 @@ const StyledNavbar = styled.nav`
     box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
     position: fixed;
     width: 100%;
+    z-index: 999;
 
     ul {
         display: flex;
@@ -21,24 +22,31 @@ const StyledNavbar = styled.nav`
 `;
 
 const NavLink = styled(Link)`
+    font-size: 1.5em;
+    letter-spacing: 0.5px;
+    padding: 40px;
+    margin-right: 40px;
+    color: ${({ theme }) => theme.colors.fontColor};
     text-decoration: none;
-    color: ${({ theme }) => theme.colors.primaryColor};
-    font-size: 1.25em;
-    padding: 40px 30px;
+    transition: .3s;
 
-    text-shadow: 2px 2px 3px rgba(6, 9, 0, 0.22);
+    &:hover {
+        color: ${({ theme }) => theme.colors.primaryColor};
+        font-size: 1.53em;
+    }
 `;
 
 
 const Navbar = () => (
     <StyledNavbar>
-        <StaticImage style={{ width: "150px" }} src="../images/logo.png" alt="logo" />
+        <Link to="/"><StaticImage style={{ width: "150px" }} src="../images/logo.png" alt="logo" /></Link>
         <ul>
             <li><NavLink to="/">Rehabilitacja</NavLink></li>
-            <li><NavLink to="/">Cennik</NavLink></li>
-            <li><NavLink to="/">Kontakt</NavLink></li>
+            <li><NavLink to="/about">O mnie</NavLink></li>
+            <li><NavLink to="/contact">Kontakt</NavLink></li>
         </ul>
     </StyledNavbar>
 );
 
 export default Navbar;
+
