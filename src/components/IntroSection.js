@@ -8,6 +8,7 @@ const StyledIntroSection = styled.section`
     height: calc(100vh - 200px);
     display: flex;
     align-items: center;
+    flex: 1;
     margin: 0 80px;
 
     p {
@@ -16,29 +17,34 @@ const StyledIntroSection = styled.section`
         line-height: 1.5em;
         letter-spacing: 1px;
     }
-`;
 
-// const StyledLink = styled(Link)`
-//     font-weight: bold;
-//     letter-spacing: 1.2px;
-//     /* text-decoration: none; */
-//     color: ${({ theme }) => theme.colors.primaryColor};
-// `;
+    @media (${({ theme }) => theme.media.notebook}) {
+        flex-direction: column;
+        padding: 5%;
+        gap: 30px;
+    };
+    @media (${({ theme }) => theme.media.mobile}) {
+        padding: 0;
+        gap: 10px;
+    };
+`;
 
 const StyledLink = styled(Link)`
     font-weight: bold;
     letter-spacing: 1.2px;
     text-decoration: none;
     background-color: ${({ theme }) => theme.colors.primaryColor};
-    color: white;
+    color: ${({ theme }) => theme.colors.secondaryColor};
 
     padding: 5px 10px;
     border-radius: 20px;
 `;
 
+
 const IntroSection = () => (
     <StyledIntroSection id="intro-section">
-        <StaticImage src="../images/handsome-confident-smiling-man-with-hands-crossed-chest.jpg" alt="Zdjęcie fizjoterapeuty" />
+        {/* <StaticImage width={1200} style={{ borderRadius: "10px" }} src="../images/portrait2.jpg" alt="Zdjęcie fizjoterapeuty" /> */}
+        <StaticImage style={{ borderRadius: "10px", width: "100%" }} src="../images/portrait2.jpg" alt="Zdjęcie fizjoterapeuty" />
         <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
             <div style={{ marginTop: "20px" }}>Więcej o mnie dowiesz się <StyledLink to="/about">tutaj</StyledLink></div>

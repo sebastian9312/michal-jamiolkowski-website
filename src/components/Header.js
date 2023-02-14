@@ -1,4 +1,6 @@
 import * as React from "react";
+import { useState } from "react";
+import { useEffect } from "react";
 import styled from "styled-components";
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
@@ -7,13 +9,16 @@ import { Flex } from "../utils/Flex.styled";
 const StyledHeader = styled.header`
     position: relative;
     height: 100vh;
+    width: 100%;
     background-color: ${({ theme }) => theme.colors.primaryColor};
 
-    /* background-image: url("https://www.transparenttextures.com/patterns/absurdity.png"); */
+    background-image: url("https://www.transparenttextures.com/patterns/absurdity.png");
 `;
 
 const StyledButton = styled(Link)`
-    margin-top: 60px;
+
+    margin-top: 20px;
+
     width: 9em;
     padding: 20px 10px;
     border-radius: 50px;
@@ -24,37 +29,51 @@ const StyledButton = styled(Link)`
     font-size: 2em;
     letter-spacing: 1.5px;
     transition: transform .2s;
-
     &:hover {
         transform: scale(1.03);
-    }
+    };
+
+    @media (${({ theme }) => theme.media.tablet}) {
+           width: 8em;
+           font-size: 1.5em;
+        };
+
 `;
 
 const HeaderBox = styled.div`
-    color: ${({ theme }) => theme.colors.secondaryColor};
-    letter-spacing: 1.8px;
-    text-shadow: 2px 2px 3px rgba(66, 79, 90, 0.67);
-
-    position: absolute;
-    top: 30%;
-    left: 15%;
-
-    text-align: center;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    text-align: center;
+    letter-spacing: 1.8px;
+    color: ${({ theme }) => theme.colors.secondaryColor};
+    text-shadow: 2px 2px 3px rgba(66, 79, 90, 0.67);
     p {
         font-size: 4em;
     };
-
     h2 {
         font-size: 2.5em;
     };
 
+    @media (${({ theme }) => theme.media.xl}) {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            p {
+                font-size: 3em;
+            }
+            h2 {
+                font-size: 1.8em;
+            }
+        };
+
+    @media (${({ theme }) => theme.media.mobile}) {
+            top: 55%;
+    };
 `;
 
 const Image = {
@@ -66,18 +85,44 @@ const Image = {
     transform: "scale(0.9)"
 };
 
-const Header = () => (
-    <StyledHeader>
-        <StaticImage style={Image} src="../images/bcg3.png" alt="bcg"></StaticImage>
-        <HeaderBox>
-            <p>Michał Jamiołkowski</p>
-            <h2>Fizjoterapia</h2>
-            <Flex style={{ gap: "20px" }}>
-                <StyledButton to="/contact" bgc="orange">Umów wizytę</StyledButton>
-                <StyledButton to="/#intro-section">O mnie</StyledButton>
-            </Flex>
-        </HeaderBox>
-    </StyledHeader>
-);
+// const Header = () => (
+//     <StyledHeader>
+//         <StaticImage style={Image} src="../images/bcg3.png" alt="bcg"></StaticImage>
+//         <HeaderBox>
+//             <p>Michał Jamiołkowski</p>
+//             <h2>Fizjoterapia</h2>
+//             <Flex style={{ gap: "20px" }}>
+//                 <StyledButton to="/contact" bgc="orange">Umów wizytę</StyledButton>
+//                 <StyledButton to="/#intro-section">O mnie</StyledButton>
+//             </Flex>
+//         </HeaderBox>
+//     </StyledHeader>
+// );
+
+
+
+const Header = () => {
+    const [width, setWidth] = useState(window.innerWidth);
+    const breakpoint = 1200;
+
+    useEffect(() => {
+        window.addEventListener("resize", () => setWidth(window.innerWidth));
+    }, []);
+
+    return (
+        <StyledHeader>
+            {width > breakpoint && <StaticImage style={Image} src="../images/bcg3.png" alt="bcg"></StaticImage>}
+            <HeaderBox>
+                <p>Michał Jamiołkowski</p>
+                <h2>Fizjoterapia</h2>
+                <Flex style={{ gap: "20px", marginTop: "40px" }}>
+                    <StyledButton to="/contact" bgc="orange">Umów wizytę</StyledButton>
+                    <StyledButton to="/#intro-section">O mnie</StyledButton>
+                </Flex>
+            </HeaderBox>
+        </StyledHeader>
+    )
+};
+
 
 export default Header;

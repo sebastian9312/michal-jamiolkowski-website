@@ -1,6 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
 import { Container } from "../utils/Container.styled";
+import { Flex } from "../utils/Flex.styled";
 import ContactContainer from "./ContactContainer";
 
 
@@ -31,6 +32,14 @@ const ContactSection = () => (
             <p>Jeżeli masz jakieś pytania, chciałbyś umówić się na wizytę zadzwoń do mnie lub napisz email. Jeśli nie będę mógł odebrać to znaczy, że aktualnie pracuję i oddzwonię po zakończeniu zabiegu.</p>
             <ContactContainer />
             <p>Jestem do dyspozycji w poniszych lokalizacjach:</p>
+            <Flex>
+                <div>
+                    <h1>MAPA GOOLE</h1>
+                </div>
+                <div>
+                    <h1>Info o lokalizacji</h1>
+                </div>
+            </Flex>
         </StyledSection>
     </Container>
 );
