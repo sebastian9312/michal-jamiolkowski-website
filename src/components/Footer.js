@@ -11,7 +11,8 @@ const StyledFooter = styled.footer`
         background-color: ${({ theme }) => theme.colors.footer};
         color: ${({ theme }) => theme.colors.secondaryColor};
         box-shadow: 0 -5px 40px #00000029;
-    `
+        z-index: 999;
+    `;
 
 const Footer = () => (
     <StyledFooter>

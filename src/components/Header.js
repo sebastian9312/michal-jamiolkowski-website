@@ -11,7 +11,6 @@ const StyledHeader = styled.header`
     height: 100vh;
     width: 100%;
     background-color: ${({ theme }) => theme.colors.primaryColor};
-
     background-image: url("https://www.transparenttextures.com/patterns/absurdity.png");
 `;
 
@@ -37,7 +36,6 @@ const StyledButton = styled(Link)`
            width: 8em;
            font-size: 1.5em;
         };
-
 `;
 
 const HeaderBox = styled.div`
@@ -84,21 +82,6 @@ const Image = {
     height: "100%",
     transform: "scale(0.9)"
 };
-
-// const Header = () => (
-//     <StyledHeader>
-//         <StaticImage style={Image} src="../images/bcg3.png" alt="bcg"></StaticImage>
-//         <HeaderBox>
-//             <p>Michał Jamiołkowski</p>
-//             <h2>Fizjoterapia</h2>
-//             <Flex style={{ gap: "20px" }}>
-//                 <StyledButton to="/contact" bgc="orange">Umów wizytę</StyledButton>
-//                 <StyledButton to="/#intro-section">O mnie</StyledButton>
-//             </Flex>
-//         </HeaderBox>
-//     </StyledHeader>
-// );
-
 
 
 const Header = () => {

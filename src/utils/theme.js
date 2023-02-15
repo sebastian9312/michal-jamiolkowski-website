@@ -10,8 +10,8 @@ export const theme = {
     },
     media: {
         mobile: "max-width: 576px",
-        tablet: "max-width: 768px",
-        notebook: "max-width: 992px",
+        tablet: "max-width: 850px",
+        notebook: "max-width: 1024px",
         xl: "max-width: 1200px"
     }
 };

@@ -58,7 +58,6 @@ const HeadingTitle = styled.p`
 `;
 
 const AboutInfoBox = styled.div`
-    /* background-color: aquamarine; */
     padding: 3.2em;
 
     ul {
@@ -88,13 +87,17 @@ const ListTitle = styled.p`
 
     @media (${({ theme }) => theme.media.mobile}) {
         font-size: 1.9em;
-        };
+    };
 `;
 
 const StyledHobbyParagraph = styled.p`
     padding-left: "50px"; 
     line-height: "1.5em"; 
     letter-spacing: "1px";
+
+    @media (${({ theme }) => theme.media.mobile}) {
+        margin-bottom: 50px;
+    };
 `;
 
 
