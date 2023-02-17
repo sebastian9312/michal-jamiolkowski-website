@@ -1,6 +1,6 @@
 import * as React from "react";
 import Layout from "../Layout";
-import AboutSection from "../components/AboutSection";
+import AboutSection from "../components/AboutSection/AboutSection";
 
 const AboutPage = () => (
     <Layout>

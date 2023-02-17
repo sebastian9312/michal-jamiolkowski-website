@@ -2,27 +2,16 @@ import * as React from "react";
 import styled from "styled-components";
 import { Container } from "../utils/Container.styled";
 import { Flex } from "../utils/Flex.styled";
-import { ContactContainer, LocalizationConatiner } from "./ContactContainers";
+import { CommunicationContainer, LocalizationConatiner } from "./ContactContainers";
 
 
 const StyledSection = styled.section`
     display: flex;
     flex-direction: column;
     text-align: center;
-    height: calc(100vh - 100px);
-    position: relative;
-    top: 100px;
+    min-height: calc(100vh - 100px);
+    padding-top: 100px;
     line-height: 1.5em;
-
-    @media (${({ theme }) => theme.media.notebook}) {
-        margin-bottom: 40px;
-    };
-    @media (${({ theme }) => theme.media.tablet}) {
-        margin-bottom: 130px;
-    };
-    @media (${({ theme }) => theme.media.mobile}) {
-        margin-bottom: 630px;
-    };
 `;
 
 const ContactTitle = styled.h1`
@@ -41,7 +30,12 @@ const ContactParagraph = styled.p`
 
 const StyledFlex = styled(Flex)`
     margin: 30px 0;
-    z-index: -1;
+    /* z-index: -1; */
+
+    @media (${({ theme }) => theme.media.tablet}) {
+        flex-direction: column;
+        text-align: center;
+    };
 `;
 
 const StyledMap = styled.iframe`
@@ -51,10 +45,12 @@ const StyledMap = styled.iframe`
     border-radius: 10px;
     box-shadow: 8px 8px 24px -15px rgba(66, 68, 90, 1);
 
+    z-index: 999;
+
     @media (${({ theme }) => theme.media.notebook}) {
         width: 100%;
     };
-    @media (${({ theme }) => theme.media.mobile}) {
+    @media (${({ theme }) => theme.media.tablet}) {
         margin-bottom: 30px;
     };
 `;
@@ -64,17 +60,34 @@ const ContactSection = () => (
         <StyledSection>
             <ContactTitle>Kontakt</ContactTitle>
             <ContactParagraph>Jeżeli masz jakieś pytania, chciałbyś umówić się na wizytę zadzwoń do mnie lub napisz email. Jeśli nie będę mógł odebrać to znaczy, że aktualnie pracuję i oddzwonię po zakończeniu zabiegu.</ContactParagraph>
-            <ContactContainer />
+            <CommunicationContainer />
             <StyledFlex>
-                <div>
-                    <StyledMap src="https://maps.google.com/maps?q=Krasi%C5%84skiego%2064%20legionowo&t=&z=11&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></StyledMap>
-                </div>
-                <div>
-                    <LocalizationConatiner />
-                </div>
+                <StyledMap width="550" height="350" src="https://maps.google.com/maps?q=Krasi%C5%84skiego%2064&t=&z=11&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></StyledMap>
+                <LocalizationConatiner />
             </StyledFlex>
         </StyledSection>
     </Container>
 );
 
+// const ContactSection = () => (
+//     <Container>
+//         <StyledSection>
+//             <ContactTitle>Kontakt</ContactTitle>
+//             <ContactParagraph>Jeżeli masz jakieś pytania, chciałbyś umówić się na wizytę zadzwoń do mnie lub napisz email. Jeśli nie będę mógł odebrać to znaczy, że aktualnie pracuję i oddzwonię po zakończeniu zabiegu.</ContactParagraph>
+//             <CommunicationContainer />
+//             <StyledFlex>
+//                 <div>
+//                     <StyledMap width="550" height="350" src="https://maps.google.com/maps?q=Krasi%C5%84skiego%2064&t=&z=11&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></StyledMap>
+//                 </div>
+//                 <div>
+//                     <LocalizationConatiner />
+//                 </div>
+//             </StyledFlex>
+//         </StyledSection>
+//     </Container>
+// );
+
 export default ContactSection;
+
+
+// poprawic position relative na paddingTop

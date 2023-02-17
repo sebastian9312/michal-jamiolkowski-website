@@ -2,29 +2,11 @@ import * as React from "react";
 import styled from "styled-components";
 import { Flex } from "../utils/Flex.styled";
 
+import { communicationIconStyles, localizationIconStyles } from "../components/ContactSection/IconStyles"
 import { FaPhone } from "@react-icons/all-files/fa/FaPhone";
 import { AiOutlineMail } from "@react-icons/all-files/ai/AiOutlineMail";
 import { GoLocation } from "@react-icons/all-files/go/GoLocation";
 import { BiTime } from "@react-icons/all-files/Bi/BiTime";
-
-
-const ContactIconStyles = {
-    fontSize: "5em",
-    color: "#08A6E4",
-    marginRight: "20px",
-    border: "3px solid #08A6E4",
-    borderRadius: "50%",
-    padding: "10px"
-};
-
-const LocalizationIconStyles = {
-    fontSize: "2.2em",
-    color: "#08A6E4",
-    marginRight: "10px",
-    border: "2px solid #08A6E4",
-    borderRadius: "50%",
-    padding: "3px"
-};
 
 const StyledFlex = styled(Flex)`
     margin: 0 auto;
@@ -74,12 +56,12 @@ const LocalizationParagraph = styled.div`
 export const LocalizationConatiner = () => (
     <StyledFlex isFlexStart>
         <div>
-            <GoLocation style={LocalizationIconStyles} />
+            <GoLocation style={localizationIconStyles} />
             <LocalizationParagraph>ul.Krasińskiego 64</LocalizationParagraph>
             <LocalizationParagraph>05-120 Legionowo</LocalizationParagraph>
         </div>
         <div>
-            <BiTime style={LocalizationIconStyles} />
+            <BiTime style={localizationIconStyles} />
             <LocalizationParagraph>Pon - pt 8:00 - 21:00</LocalizationParagraph>
             <LocalizationParagraph>Sobota - 10:00 - 18:00</LocalizationParagraph>
             <LocalizationParagraph>Niedziela - 12:00 - 18:00</LocalizationParagraph>
@@ -87,14 +69,14 @@ export const LocalizationConatiner = () => (
     </StyledFlex>
 );
 
-export const ContactContainer = () => (
+export const CommunicationContainer = () => (
     <StyledFlex>
         <StyledContactBox>
-            <AiOutlineMail style={ContactIconStyles} />
+            <AiOutlineMail style={communicationIconStyles} />
             <ContactLink href="mailto: michal.jamiolkowski93@gmail.com">michal.jamiolkowski93@gmail.com</ContactLink>
         </StyledContactBox>
         <StyledContactBox>
-            <FaPhone style={ContactIconStyles} />
+            <FaPhone style={communicationIconStyles} />
             <ContactLink href="tel:664-280-212">+48 664 280 212</ContactLink>
         </StyledContactBox>
     </StyledFlex>
