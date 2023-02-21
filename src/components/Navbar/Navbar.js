@@ -18,9 +18,9 @@ const Navbar = () => {
             </HamburgerButton>
             <Link to="/"><StaticImage style={{ width: "250px", marginLeft: "6vw" }} src="../../images/new-logo.png" alt="logo" /></Link>
             <MenuLinks menu={menu}>
-                <li><NavLink to="/">Fizjoterapia</NavLink></li>
+                <li><NavLink to="/physiotherapy">Fizjoterapia</NavLink></li>
                 <li><NavLink to="/about">O mnie</NavLink></li>
-                <li><NavLink to="/about">Cennik</NavLink></li>
+                <li><NavLink to="/price-list">Cennik</NavLink></li>
                 <li><NavLink to="/contact">Kontakt</NavLink></li>
             </MenuLinks>
         </StyledNavbar>

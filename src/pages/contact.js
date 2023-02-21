@@ -1,6 +1,6 @@
 import * as React from "react";
 import Layout from "../Layout";
-import ContactSection from "../components/ContactSection";
+import ContactSection from "../components/ContactSection/ContactSection";
 
 
 const ContactPage = () => (

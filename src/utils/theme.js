@@ -4,8 +4,8 @@ export const theme = {
         secondaryColor: "#fff",
         // actionColor: "#00d084",
         // actionDarkColor: "#29524A",
-        fontColor: "#666",
-        blackColor: "#333",
+        fontColor: "#555",
+        blackColor: "#444",
         footer: "#333"
     },
     media: {
@@ -15,4 +15,3 @@ export const theme = {
         xl: "max-width: 1200px"
     }
 };
-// $color-light-grey: #F7F7F7;

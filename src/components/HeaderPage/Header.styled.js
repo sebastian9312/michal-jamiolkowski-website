@@ -1,12 +1,7 @@
-import * as React from "react";
-import { useState } from "react";
-import { useEffect } from "react";
 import styled from "styled-components";
 import { Link } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image";
-import { Flex } from "../utils/Flex.styled";
 
-const StyledHeader = styled.header`
+export const StyledHeader = styled.header`
     position: relative;
     height: 100vh;
     width: 100%;
@@ -14,7 +9,7 @@ const StyledHeader = styled.header`
     background-image: url("https://www.transparenttextures.com/patterns/absurdity.png");
 `;
 
-const StyledButton = styled(Link)`
+export const StyledButton = styled(Link)`
 
     margin-top: 20px;
 
@@ -38,7 +33,7 @@ const StyledButton = styled(Link)`
         };
 `;
 
-const HeaderBox = styled.div`
+export const HeaderBox = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -74,7 +69,7 @@ const HeaderBox = styled.div`
     };
 `;
 
-const Image = {
+export const Image = {
     position: "absolute",
     bottom: "-7%",
     right: "-5%",
@@ -82,30 +77,3 @@ const Image = {
     height: "100%",
     transform: "scale(0.9)"
 };
-
-
-const Header = () => {
-    const [width, setWidth] = useState(window.innerWidth);
-    const breakpoint = 1200;
-
-    useEffect(() => {
-        window.addEventListener("resize", () => setWidth(window.innerWidth));
-    }, []);
-
-    return (
-        <StyledHeader>
-            {width > breakpoint && <StaticImage style={Image} src="../images/bcg3.png" alt="bcg"></StaticImage>}
-            <HeaderBox>
-                <p>Michał Jamiołkowski</p>
-                <h2>Fizjoterapia</h2>
-                <Flex style={{ gap: "20px", marginTop: "40px" }}>
-                    <StyledButton to="/contact" bgc="orange">Umów wizytę</StyledButton>
-                    <StyledButton to="/#intro-section">O mnie</StyledButton>
-                </Flex>
-            </HeaderBox>
-        </StyledHeader>
-    )
-};
-
-
-export default Header;

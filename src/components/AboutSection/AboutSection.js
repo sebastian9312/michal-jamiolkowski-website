@@ -29,7 +29,7 @@ const AboutSection = () => (
                         <li>Szkolenie Diagnostyka słabych ogniw w treningu siłowym</li>
                     </ul>
                 </AboutInfoBox>
-                <StaticImage style={{ borderRadius: "10px" }} src="../../images/portrait.jpg" alt="Zdjęcie fizjoterapeuty" />
+                <StaticImage style={{ borderRadius: "10px" }} src="../../images/misiek-about.png" alt="Zdjęcie fizjoterapeuty" />
             </StyledFlex>
 
             <StyledFlex isRevers>

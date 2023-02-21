@@ -1,13 +1,14 @@
-// import * as React from "react";
-// import Layout from "../Layout";
-// import AboutSection from "../components/AboutSection";
+import * as React from "react";
+import Layout from "../Layout";
+import PriceListSection from "../components/PriceListSection/PriceListSection";
 
-// const AboutPage = () => (
-//     <Layout>
-//         <AboutSection />
-//     </Layout>
-// );
 
-// export default AboutPage;
+const PriceListPage = () => (
+    <Layout>
+        <PriceListSection />
+    </Layout>
+);
 
-// export const Head = () => <title>About Page</title>;
+export default PriceListPage;
+
+export const Head = () => <title>About Page</title>;
