@@ -40,7 +40,7 @@ const AboutSection = () => (
             </StyledFlex>
 
         </StyledSection>
-    </Container >
+    </Container>
 );
 
 export default AboutSection;

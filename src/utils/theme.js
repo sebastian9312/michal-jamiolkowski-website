@@ -2,8 +2,7 @@ export const theme = {
     colors: {
         primaryColor: "#336eb9",
         secondaryColor: "#fff",
-        // actionColor: "#00d084",
-        // actionDarkColor: "#29524A",
+        actionColor: "#FCD02B",
         fontColor: "#555",
         blackColor: "#444",
         footer: "#333"

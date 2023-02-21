@@ -54,7 +54,7 @@ export const StyledMap = styled.iframe`
     };
 `;
 
-export const CommunicationContainer = styled.div`
+export const ContactContainer = styled.div`
     display: flex;
     align-items: center;
     text-align: center;

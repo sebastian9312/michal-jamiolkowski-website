@@ -21,7 +21,7 @@ const Header = () => {
                 <p>Michał Jamiołkowski</p>
                 <h2>Fizjoterapia</h2>
                 <Flex style={{ gap: "20px", marginTop: "40px" }}>
-                    <StyledButton to="/contact" bgc="orange">Umów wizytę</StyledButton>
+                    <StyledButton to="/contact" bgc="#FCD02B">Umów wizytę</StyledButton>
                     <StyledButton to="/#intro-section">O mnie</StyledButton>
                 </Flex>
             </HeaderBox>

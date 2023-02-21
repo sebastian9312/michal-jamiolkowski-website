@@ -11,4 +11,4 @@ const PriceListPage = () => (
 
 export default PriceListPage;
 
-export const Head = () => <title>About Page</title>;
+export const Head = () => <title>Price-list Page</title>;

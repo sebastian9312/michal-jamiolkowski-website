@@ -10,9 +10,7 @@ export const StyledHeader = styled.header`
 `;
 
 export const StyledButton = styled(Link)`
-
     margin-top: 20px;
-
     width: 9em;
     padding: 20px 10px;
     border-radius: 50px;
