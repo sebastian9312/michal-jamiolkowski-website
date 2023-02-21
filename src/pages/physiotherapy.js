@@ -11,4 +11,4 @@ const PhysiotherapyPage = () => (
 
 export default PhysiotherapyPage;
 
-export const Head = () => <title>Price List Page</title>;
+export const Head = () => <title>Physiotherapy Page</title>;

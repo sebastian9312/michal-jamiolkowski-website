@@ -1,8 +1,10 @@
 import * as React from "react";
 import { Container } from "../../utils/Container.styled";
 import CommunicationContainer from "./CommunicationContainer";
-import { StyledSection, ContactTitle, ContactParagraph, ContactLink, StyledMap, ContactContainer, StyledFlex, LocalizationConatiner, LocalizationParagraph } from "./ContactSection.styled";
-import { EmailIcon, TelephoneIcon, TimeIcon, LocationIcon } from "./IconStyles";
+// import { StyledSection, ContactTitle, ContactParagraph, ContactLink, StyledMap, ContactContainer, StyledFlex, LocalizationConatiner, LocalizationParagraph } from "./ContactSection.styled";
+import { StyledSection, ContactTitle, ContactParagraph, StyledMap, StyledFlex, LocalizationConatiner, LocalizationParagraph } from "./ContactSection.styled";
+// import { EmailIcon, TelephoneIcon, TimeIcon, LocationIcon } from "./IconStyles";
+import { TimeIcon, LocationIcon } from "./IconStyles";
 
 
 const ContactSection = () => (
@@ -21,8 +23,8 @@ const ContactSection = () => (
                     </div>
                     <div>
                         <TimeIcon />
-                        <LocalizationParagraph>Sobota - 10:00 - 18:00</LocalizationParagraph>
-                        <LocalizationParagraph>Niedziela - 12:00 - 18:00</LocalizationParagraph>
+                        <LocalizationParagraph>Piątek - 17:00 - 20:00</LocalizationParagraph>
+                        <LocalizationParagraph>Sobota - 10:00 - 15:00</LocalizationParagraph>
                     </div>
                 </StyledFlex>
             </LocalizationConatiner>

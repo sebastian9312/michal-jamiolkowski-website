@@ -6,7 +6,7 @@ export const StyledSection = styled.section`
     flex-direction: column;
     text-align: center;
     min-height: calc(100vh - 100px);
-    padding-top: 100px;
+    padding: 100px 0;
     line-height: 1.5em;
 `;
 
