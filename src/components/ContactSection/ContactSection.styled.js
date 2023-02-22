@@ -46,7 +46,7 @@ export const StyledMap = styled.iframe`
     border: none;
     border-radius: 10px;
     box-shadow: 8px 8px 24px -15px rgba(66, 68, 90, 1);
-    z-index: 999;
+    z-index: 99;
 
     @media (${({ theme }) => theme.media.notebook}) {
         width: 100%;

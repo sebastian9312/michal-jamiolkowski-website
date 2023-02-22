@@ -9,21 +9,31 @@ export const StyledIntroSection = styled.section`
     flex: 1;
     margin: 0 80px;
 
-    p {
-        margin: 0 70px;
-        width: 100%;
-        line-height: 1.5em;
-        letter-spacing: 1px;
-    }
-
     @media (${({ theme }) => theme.media.notebook}) {
         flex-direction: column;
         padding: 5%;
         gap: 30px;
     };
+    @media (${({ theme }) => theme.media.tablet}) {
+        margin: 0 40px;
+        padding: 5%;
+        gap: 30px;
+    };
     @media (${({ theme }) => theme.media.mobile}) {
-        padding: 0;
+        padding: 20px;
         gap: 10px;
+        margin: 0;
+    };
+`;
+
+export const IntroParagraph = styled.p`
+    margin: 0 70px;
+    width: 100%;
+    line-height: 1.5em;
+    letter-spacing: 1px;
+
+    @media (${({ theme }) => theme.media.mobile}) {
+        margin: 0;
     };
 `;
 
